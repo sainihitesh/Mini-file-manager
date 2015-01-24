@@ -1,0 +1,120 @@
+body{background-image:-webkit-linear-gradient(top,#459685,#999999); }
+ul{
+     background-image:-webkit-linear-gradient(top,#459685,#999999);
+}
+li.ui-menu-item
+{
+   background: black;
+   color:white;
+}
+li.ui-menu-item:hover{
+	background: rgba(10,20,50,0.8);
+}
+li.headlis
+{
+	
+	font-size: 25px;
+	display: inline;
+
+	
+	background: 
+}
+input.srchi,input.csrchi
+{
+	width: 320px;
+	height: 30px;
+	margin-top: -5px;
+	background: rgba(50,50,105,0.5);
+	border-radius: 7px 0px 0px 7px;
+	border-color: rgba(50,50,105,0.5);
+	transition:all 0.3s ease-in-out;
+
+}
+input.csrchi:focus,input.srchi:focus
+{
+	
+	color:white;
+	background: rgba(10,20,50,0.8);
+	
+}
+li.headlis
+{
+
+	
+	
+	height: 28px;
+    background: rgba(50,50,105,0.5);
+    border:1px solid white;
+    border-radius:0px 3px 3px 0px;
+    display:inline;
+    text-align: center;
+    transition:all 0.3s ease-in-out;
+}
+li.headlis:hover
+{
+	height: 30px;
+	background: white;
+	cursor: hand;
+}
+input.srchs
+{
+	width: 100px;
+	height: 30px;
+	margin-top: -5px;
+	
+	
+	border-radius: 0px 7px 7px 0px;
+	border-color: white;
+	transition:all 0.3s ease-in-out;
+}
+input.srchs:hover
+{
+	
+	
+	background: rgba(10,20,50,0.8);
+	cursor: hand;
+	
+}
+	#ps{
+		width: 1220px;
+
+	}
+     #hs{
+     	overflow: scroll;
+     	float: left;
+     	width: 300px; height: 100px;
+     	border:1px solid blue;
+     	border-color: cyan;
+     	transition:all 0.3s ease-in-out;
+     }
+     #hs:hover{
+     	border-color: blue;
+     	background: cyan;
+     	color:white;cursor: hand
+     }
+     #hss{
+     	overflow: no;
+     	float: left;
+     	width: 300px; height: 300px;
+     	border:1px solid blue;
+     	border-color: cyan;
+     	transition:all 0.3s ease-in-out;
+     }#hss:hover{
+     	border-color: blue;
+     	background: cyan;
+     	color:white;cursor: hand
+     }
+     #maind{
+     	width:298px;
+     	height:20px;
+     }
+     #embd{
+     	height: 80px;
+     }
+     ul.lin{
+     	margin-top: -5px;
+     	background: black;
+     }
+#tabs,#editTabs{
+	width: 1200px;
+}     
