@@ -1,20 +1,12 @@
-<?php include_once('functions.inc') ?>
 <html><title>File Manager by HS</title>
 <head>
+<link rel="stylesheet" href="js/vi.css">
 <link rel="stylesheet" href="js/jquery-ui.css">
 <script src='js/jquery.js' type="text/javascript"></script>
 <script type="text/javascript" src="js/scripts/shCore.js"></script>
 <script src='js/jquery-ui.js' type="text/javascript"></script>
 <link rel="stylesheet" href="js/styles/shCoreDefault.css">
-<link rel="stylesheet" href="js/vi.css">
 <script type="text/javascript">SyntaxHighlighter.all();</script>
-<script>
-  $(function() {
-    $( document ).tooltip({
-      track: true
-    });
-  });
-  </script>
 <?php
 
 
@@ -136,37 +128,19 @@ while ($open=readdir($read))
 	$ss=count_file($open);
   if(is_file($open)){$filety='(File)';}else{$filety='(Folder)';}
 	$srvr="http://localhost?path=".$fd."/".$open;
-	?>
- <div id="hs" title="<?php $detail=detail($open); echo"File Size:{".$detail['size']."bytes} " ;echo 'Last access:{'.$detail['atime']."}      Last modify:{".$detail['mtime']."}";  ?>"> 
-<?php 
-echo "<a href='$srvr'>$srvr</a><br><k style='color:white; background:black;'>".$open.' '.$filety."</k></div>";
-?>
-<?php    }
+	echo "<div id='hs' title='$rr folders,$ss files'><a href='$srvr'>$srvr</a><br><k style='color:white; background:black;'>".$open.' '.$filety."</k></div>";
+    }
 }
  }
 
 elseif (is_file($fd)) {
 	
 	?>
-<script type="text/javascript">
-  $.fx.speeds._default = 1000;
-  $(function() {
-    $( "#aboutfile" ).dialog({
-      autoOpen: false,
-      show: "blind",
-      hide: "explode"
-    });
-    
-    $( "#rerun" ).click(function() {
-      $( "#aboutfile" ).dialog( "open" );
-      return false;
-    });
-  });
-</script><div id='aboutfile' style="color:black" title="<?php echo 'about file'.$fd; ?>"><?php $detail=detail($fd); echo"File Size: ".$detail['size']."bytes<br> " ;echo 'Last access:'.$detail['atime']." <br>     Last modify:".$detail['mtime']."";  ?></div>
-<div id='hss' title="">
+
+<div id='hss' title=' 0 folders,1 file'>
    
    <div id='embd'>
-    <ul class="lin" ><div>
+    <ul class="lin"><div>
     setting<button id="rerun"style='margin-left:20p;'></button>
     <button id="select"></button>
   </div>
@@ -264,7 +238,9 @@ function fetch_file($file)
 
 <script type="text/javascript">
 	$(function() {
-		
+		$( document ).tooltip({
+			track: true
+		});
 	
 		$( "#tabs" ).tabs();
 		$( "#editTab" ).tabs();
@@ -322,7 +298,6 @@ function fetch_file($file)
 		<li><a href="#tabs-1">File Explorer</a></li>
 		<li><a href="#tabs-2">CREATE PROJECTS</a></li>
 		<li><a href="#tabs-3">EXPLORER 2</a></li>
-    <li><a href="#tabs-4">ABOUT FILE MANAGER</a></li>
 	</ul>
 	<div id="tabs-1">
 	PROJECTS
@@ -455,34 +430,7 @@ function fetch_file($file)
                 $location='http://localhost?path='.$_POST['rfile'];
                 echo"<a href='$location'>See Edited File</a>";
             }
-             ?></div><div id="tabs-4">
-        This software is built in PHP, jquery ,jquery ui, css, and html and used for file management on 
-        server. And further it can be used by users for running php scripts directly without setting up any 
-        configuration and installing any other software in working machine.<br><br> 
-       Why to use this software?
-       <br>-this software can be used to run PHP codes through it without setting up any configuration
-       and integration.<br><br>
-      <p style='text-decoration:underline'> HOW TO </p>
-       <p style='text-decoration:underline'>To see a project and files</p>
-       -To see a project and files click on the directory which are rendered on screen.
-       then it will redirect you to the project's page.
-       <br>
-       <p style='text-decoration:underline'>To create a new folder and file</p>
-       To create a file and folder, first go to that directory as described earlier
-       in which a folder or file  are to be created. then Go to the second main tab 
-       having title 'Create projects' and give name to folder or to file by filling the first ad 
-       second input. and then click on the create button. thus new file or folder wil be create.<br><br>
-       <p style='text-decoration:underline'>To edit a Existing file or project</p>
-       To Edit a existing file or project  go to the targret file and click on the drop down icon and click on the edit link
-       then page will redirect you to the edit page of that file or project. after editing the file click on save button. 
-       editing will be saved to actual file. then you can run the edited file or project.
-       <p style='text-decoration:underline'>For more help</p> you can contact me on my site <a href="http://hiteshs.netai.net">here</a>
-       and my fb profile <a href="https://facebook.com/HiteshSaini99">here</a>
-       
-        </div>
-
-
-             </div></div>
+             ?></div></div></div>
 <div id='ps'></div>
 </body>
 </html>
